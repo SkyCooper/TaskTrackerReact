@@ -1,14 +1,14 @@
-# Project : Template
+# Project : Task Tracker
 
 ## Check The Live Website ➡️ [Live Website](https://skycooper.github.io)
 
 ## Visualization of the Website
 
-![Form](./gallery.gif)
+![Form](./task-tracker.gif)
 
 ## Description
 
-Project aims to create an image gallery app using React.
+Project aims to create a Task Tracker App using React.
 
 ## Learning Outcomes
 
@@ -25,23 +25,28 @@ At the end of the project, you will be able to;
 ## Project Skeleton
 
 ```
-Image Gellery Project(folder)
+Task Tracker Project(folder)
 |
 |----README.md
 ├── public
 │     └── index.html
 ├── src
 │    ├── components
-│    │       ├── Picture.jsx
-│    ├── pages
-│    │       ├── Homepage.jsx
-│    ├── helper
-│    │       └── data.js
-│    ├── styles
-│    │       ├── style.css
+│    │       ├── Header.js
+│    │       │     └── Button.js
+│    │       │   
+│    │       ├── AddTask.js
+│    │       │   
+│    │       │   
+│    │       └── Tasks.js
+│    │             └── Task.js
+│    │            
 │    ├── App.js
+│    ├── App.css
 │    ├── index.js
-└── package.json
+│    └── index.css
+├── package.json
+└── yarn.lock
 ```
 
 ### Overview
@@ -51,13 +56,17 @@ You can see the visual representation of the website above.
 
 ## Notes
 
-- Step 1: Create React App using `npx create-react-app image-gallery`
+- Step 1: Create React App using `npx create-react-app task-tracker`
 
-- Step 2: For images you can use [Images](./src/helper/data.js).
+- Step 2 : Install `"react-icons"` package to your `package.json` for icons.
 
-- Step 3: Push your application into your own public repo on Github
+- Step 3: Build Task Tracker App.
 
-- Step 4: Add project gif to your project and README.md file.
+- Step 4: You can use CSS frameworks like Bootstrap, Semantic UI.
+
+- Step 5: Push your application into your own public repo on Github
+
+- Step 6: Add project gif to your project and README.md file.
 
 ## Resources
 
