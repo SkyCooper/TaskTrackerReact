@@ -1,19 +1,22 @@
 import Header from "../components/Header";
 import ShowTask from "../components/ShowTask";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Main = () => {
-  const [tasks, setTasks] = useState([]);
 
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   console.log(tasks);
   return (
-    <div className="container">
     <div className="task-card">
       <Header tasks={tasks} setTasks={setTasks} />
       <ShowTask tasks={tasks} setTasks={setTasks} />
-    </div>
-
     </div>
   );
 };

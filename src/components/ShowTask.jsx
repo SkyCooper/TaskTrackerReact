@@ -1,8 +1,9 @@
-
 const ShowTask = () => {
   return (
-    <div>ShowTask</div>
-  )
-}
+    <div>
+      <h2>Show Task</h2>
+    </div>
+  );
+};
 
-export default ShowTask
+export default ShowTask;
