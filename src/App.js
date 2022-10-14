@@ -1,8 +1,9 @@
+import Main from "../pages/Main"
 
 
 const App = () => {
   return(
-    <h1>Template</h1>
+  <Main/>
   )
 }
 
