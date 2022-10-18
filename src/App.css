@@ -70,9 +70,9 @@ button {
   margin: 1rem 1.5rem;
 }
 .task-item {
+  display: flex;
   border:2px solid purple;
   border-radius: 8px;
-  position: relative;
   padding: 0.3rem .4rem;
   margin:  0.5rem 0;
 
@@ -88,7 +88,7 @@ button {
   top: 10px;
   cursor: pointer;
 }
-.task-desc {
+.task-name {
   cursor: pointer;
   display: inline-block;
 }

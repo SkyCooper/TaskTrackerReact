@@ -9,7 +9,7 @@ const AddTask = ({ tasks, setTasks }) => {
     e.preventDefault();
     const id = uuid();
     const newTask = { id: id, task: task, date: date, complete: false };
-    setTask([...tasks, newTask]);
+    setTasks([...tasks, newTask]);
     setTask("");
     setDate("");
   };

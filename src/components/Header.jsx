@@ -12,14 +12,14 @@ const Header = ({ tasks, setTasks }) => {
     if (show) {
       setBtn({ name: "SHOW ADD TASK BAR", bgColor: "red" });
     } else {
-      setBtn({ name: "CLOSE ADD TASK BAR", bgColor: "blue" });
+      setBtn({ name: "HIDE ADD TASK BAR", bgColor: "green" });
     }
     setShow(!show)
   };
   return (
-    <div className="header">
-      <h1>Task Tracker</h1>
-      <button onClick={visibleClick}>{btn.name}</button>
+    <div className="header text-center">
+      <h1 className="text-center">Task Tracker</h1>
+      <button className="p-2 btn btn-lg" onClick={visibleClick} style={{background : btn.bgColor}}>{btn.name}</button>
       {show ? <AddTask tasks={tasks} setTasks={setTasks}/> : null}
 
       {/* {show && <AddTask tasks={tasks} setTasks={setTasks}/>} */}
