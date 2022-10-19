@@ -17,11 +17,10 @@ const AddTask = ({ tasks, setTasks }) => {
   return (
     <div className="add-task">
       <form onSubmit={handleSubmit}>
-        <div className="text-center">
+        <div className="text-center  d-flex justify-content-between">
           <label htmlFor="task" className="fs-2">
             Task
           </label>{" "}
-          <br />
           <input
             type="text"
             name="task"
@@ -33,27 +32,26 @@ const AddTask = ({ tasks, setTasks }) => {
             className="w-50 p-2"
           />
         </div>
-        <div className="m-1 text-center">
+        <div className="m-1 text-center d-flex justify-content-between">
           <label htmlFor="date" className="fs-4">
             Day & Time
           </label>{" "}
-          <br />
           <input
-            className="w-25 p-2"
+            className="w-50 p-2"
             type="date"
             id="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
             required
           />
-          <div>
-            <button
-              type="submit"
-              className="save-btn mt-4 w-25 p-3 rounded-pill btn btn-success"
-            >
-              Save Task
-            </button>
-          </div>
+        </div>
+        <div>
+          <button
+            type="submit"
+            className="save-btn mt-4 w-25 p-3 rounded-pill btn btn-success mb-2"
+          >
+            Save Task
+          </button>
         </div>
       </form>
     </div>

@@ -18,7 +18,7 @@ const Header = ({ tasks, setTasks }) => {
     <div className="header text-center">
       <h1 className="text-center">Task Tracker</h1>
       <button
-        className="p-3 w-50 text-white rounded-pill mb-2"
+        className="p-2 w-50 text-white rounded-pill mb-2"
         onClick={visibleClick}
         style={{ background: btn.bgColor, fontSize : "1.5rem" }}
       >
