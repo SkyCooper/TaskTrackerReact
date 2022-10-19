@@ -9,7 +9,7 @@ const AddTask = ({ tasks, setTasks }) => {
     e.preventDefault();
     const id = uuid();
     const newTask = { id: id, task: task, date: date, complete: false };
-    setTasks([...tasks, newTask]);
+    setTasks([newTask, ...tasks]);
     setTask("");
     setDate("");
   };
@@ -17,8 +17,11 @@ const AddTask = ({ tasks, setTasks }) => {
   return (
     <div className="add-task">
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="task">Task</label>
+        <div className="text-center">
+          <label htmlFor="task" className="fs-2">
+            Task
+          </label>{" "}
+          <br />
           <input
             type="text"
             name="task"
@@ -27,11 +30,16 @@ const AddTask = ({ tasks, setTasks }) => {
             value={task}
             onChange={(e) => setTask(e.target.value)}
             required
+            className="w-50 p-2"
           />
         </div>
-        <div>
-          <label htmlFor="date">Day & Time</label>
+        <div className="m-1 text-center">
+          <label htmlFor="date" className="fs-4">
+            Day & Time
+          </label>{" "}
+          <br />
           <input
+            className="w-25 p-2"
             type="date"
             id="date"
             value={date}
@@ -39,7 +47,10 @@ const AddTask = ({ tasks, setTasks }) => {
             required
           />
           <div>
-            <button type="submit" className="save-btn">
+            <button
+              type="submit"
+              className="save-btn mt-4 w-25 p-3 rounded-pill btn btn-success"
+            >
               Save Task
             </button>
           </div>
