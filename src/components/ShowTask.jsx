@@ -17,17 +17,31 @@ const ShowTask = ({ tasks, setTasks }) => {
           return (
             <div
               key={task.id}
-              className="task-item d-flex justify-content-around border border-1 align-item-center bg-light text-dark m-4"
+              className="task-item d-flex justify-content-between border border-1 align-item-center bg-light text-dark m-4"
             >
               <div
                 onClick={() => changeLine(task)}
-                className="task-name "
+                className="task-name d-flex justify-content-around"
                 style={{
                   textDecoration: task.complete && "line-through",
                 }}
               >
-                <h2 className="task-title">{task.task}</h2>
-                <p className="task-date">{task.date}</p>
+                <div className="my-4">
+                  {task.complete ? (
+                    <i className="fa-solid fa-check-circle fa-2xl text-success mx-4"></i>
+                  ) : (
+                    <i className="fa-solid fa-check fa-2xl text-dark mx-4"></i>
+                  )}
+                </div>
+                <div className="px-3">
+                  <h3 className="task-title">{task.task.toUpperCase()}</h3>
+                  <p className="task-date">
+                    {task.date
+                      .toString()
+                      .replaceAll("-", "/")
+                      .replace("T", " - ")}
+                  </p>
+                </div>
               </div>
               <div className="m-4">
                 <i className="fa-solid fa-edit fa-2xl text-warning mx-4"></i>

@@ -5,13 +5,13 @@ const Header = ({ tasks, setTasks }) => {
   const [show, setShow] = useState(false);
   const [btn, setBtn] = useState({
     name: "SHOW ADD TASK BAR",
-    bgColor: "green",
+    bgColor: "rgb(95, 168, 95)",
   });
 
   const visibleClick = () => {
     show
-      ? setBtn({ name: "SHOW ADD TASK BAR", bgColor: "green" })
-      : setBtn({ name: "HIDE ADD TASK BAR", bgColor: "red" });
+      ? setBtn({ name: "SHOW ADD TASK BAR", bgColor: "rgb(95, 168, 95)" })
+      : setBtn({ name: "HIDE ADD TASK BAR", bgColor: "rgb(238, 125, 125)" });
     setShow(!show);
   };
   return (

@@ -7,7 +7,7 @@ const Main = () => {
 
   console.log(tasks);
   return (
-    <div className="container w-50 bg-warning">
+    <div className="container w-50">
       <div className="task-card">
         <Header tasks={tasks} setTasks={setTasks} />
         <ShowTask tasks={tasks} setTasks={setTasks} />

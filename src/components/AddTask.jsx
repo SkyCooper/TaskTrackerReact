@@ -38,9 +38,9 @@ const AddTask = ({ tasks, setTasks }) => {
           </label>{" "}
           <input
             className="w-50 p-2"
-            type="date"
+            type="datetime-local"
             id="date"
-            value={date}
+            value={String(date).replace("T", " ")}
             onChange={(e) => setDate(e.target.value)}
             required
           />
